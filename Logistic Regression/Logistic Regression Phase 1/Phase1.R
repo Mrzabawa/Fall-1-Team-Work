@@ -34,7 +34,8 @@ summary(dataTrain)
 # Visual representation of missing values
 # Examine multicollinearity 
 # Write the report 
-
+ 
+#1234
 
 
 
