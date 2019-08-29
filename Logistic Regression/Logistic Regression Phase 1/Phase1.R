@@ -24,7 +24,7 @@ summary(dataTrain)
 #Test to see if models(next code) is working
 lmod = glm(INS ~ ACCTAGE,data = dataTrain, family = binomial(link="logit"))
 
-#fitting every model with ins regressed on every independent variable individually
+#fitting every  model with ins regressed on every independent variable individually
 models = sapply(setdiff(names(dataTrain),"INS"),
          function(x) summary(glm(reformulate(x,response="INS"),
                               data=dataTrain,family=binomial)))
