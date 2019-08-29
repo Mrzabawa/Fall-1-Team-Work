@@ -35,8 +35,7 @@ summary(dataTrain)
 # Examine multicollinearity 
 # Write the report 
  
-#1234
-
+#123
 
 
 
