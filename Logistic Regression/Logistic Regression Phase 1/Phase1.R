@@ -3,6 +3,9 @@
 #                Due September 6                                              #
 #                Team Blue 5                                                  #
 ###############################################################################
+
+#Katlyn's comment
+
 library('haven')#for read_sas()
 #load data
 dataTrain <- read_sas('insurance_t.sas7bdat')
@@ -26,17 +29,11 @@ summary(dataTrain)
 
 # Bullet point 3:
 # Test the linearity assumptions for continuous variables (logit stuff?)
-# Qq plots 
+# Qq plots
 # Y = log odds (logits)
 # X = predictor variable (continuous)
 
 # Bullet point 4:
 # Visual representation of missing values
-# Examine multicollinearity 
-# Write the report 
-
-
-
-
-
-
+# Examine multicollinearity
+# Write the report
