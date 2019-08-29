@@ -3,6 +3,9 @@
 #                Due September 6                                              #
 #                Team Blue 5                                                  #
 ###############################################################################
+
+# This is a comment I think
+
 library('haven')#for read_sas()
 #load data
 dataTrain <- read_sas('insurance_t.sas7bdat')
