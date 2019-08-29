@@ -1,4 +1,8 @@
-
+###############################################################################
+#                Phase 1 for Logistic Regression Homework                     #
+#                Due September 6                                              #
+#                Team Blue 5                                                  #
+###############################################################################
 library('haven')#for read_sas()
 
 dataTrain <- read_sas('insurance_t.sas7bdat')
