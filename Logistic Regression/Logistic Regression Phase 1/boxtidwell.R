@@ -19,7 +19,13 @@ path <- system.file('insurance_t.sas7bdat')
 
 data <- read_sas('insurance_t.sas7bdat')
 
-car.boxTidwell($INS ~ ACCTAGE + DDABL + DEP + DEPAMT + CHECKS + NSF + PHONE + 
-             TELLER + SAVBAL + ATMAMT + POS + POSAMT + CDBAL + IRABAL + LOCBAL +
-             INVBAL + ILSBAL + MMBAL + MMCRED + MTGBAL + CCBAL + CCPURC + INCOME +
-             LORES + HMVAL + AGE + CRSCORE , data=data)
+#test = boxTidwell(INS ~ ACCTAGE  + DEPAMT + CHECKS + NSF + PHONE + 
+#             TELLER + SAVBAL + ATMAMT + POS + POSAMT + CDBAL + IRABAL +
+#             INVBAL + ILSBAL + MMBAL + MMCRED + MTGBAL + CCPURC + INCOME +
+#             LORES + HMVAL + AGE + CRSCORE , data=data)
+
+fit.gam <- gam(INS ~ s(ACCTAGE) + s(DEPAMT) + s(CHECKS) + 
+                      s(TELLER) + s(SAVBAL) + s(ATMAMT) + s(POS) + s(POSAMT) + s(CDBAL) + s(IRABAL) +
+                      s(INVBAL) + s(ILSBAL) + s(MMBAL) + s(MTGBAL) + s(INCOME) +
+                      s(LORES) + s(HMVAL) + s(AGE) + s(CRSCORE) , data = data, family = binomial(link = 'logit'), method = 'REML')
+summary(fit.gam)
