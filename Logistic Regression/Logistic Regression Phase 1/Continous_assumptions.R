@@ -24,6 +24,7 @@ data <- read_sas('insurance_t.sas7bdat')
 #             INVBAL + ILSBAL + MMBAL + MMCRED + MTGBAL + CCPURC + INCOME +
 #             LORES + HMVAL + AGE + CRSCORE , data=data)
 
+
 fit.gam <- gam(INS ~ s(ACCTAGE) + s(DEPAMT) + s(CHECKS) + 
                       s(TELLER) + s(SAVBAL) + s(ATMAMT) + s(POS) + s(POSAMT) + s(CDBAL) + s(IRABAL) +
                       s(INVBAL) + s(ILSBAL) + s(MMBAL) + s(MTGBAL) + s(INCOME) +
